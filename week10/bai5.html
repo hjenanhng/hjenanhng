@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <script language="javascript">
+        var n = prompt("Nhập số bảng cửu chương bạn muốn in (2-9):", "5");
+        
+        if (n == null || isNaN(n) || n < 1) {
+            document.write("Vui lòng nhập một số hợp lệ.");
+        } else {
+            document.write("<h2>Multiplication Table for " + n + "</h2>");
+            document.write("<table border='1' style='border-collapse: collapse; width: 200px; text-align: center;'>");
+            
+            for (var i = 1; i <= 10; i++) {
+                document.write("<tr>");
+                document.write("<td>" + n + " x " + i + " = " + (n * i) + "</td>");
+                document.write("</tr>");
+            }
+            
+            document.write("</table>");
+        }
+    </script>
+</body>
+</html>
