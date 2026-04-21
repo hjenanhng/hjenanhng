@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Extra Exercises</title>
+    <script language="javascript">
+        // a. Tính hình chữ nhật
+        function tinhHCN() {
+            var dai = parseFloat(document.getElementById("dai").value);
+            var rong = parseFloat(document.getElementById("rong").value);
+            if (isNaN(dai) || isNaN(rong)) {
+                alert("Vui lòng nhập số hợp lệ");
+                return;
+            }
+            var chuvi = (dai + rong) * 2;
+            var diện tích = dai * rong;
+            document.getElementById("resHCN").innerHTML = "Chu vi: " + chuvi + " | Diện tích: " + diện tích;
+        }
+
+        // b. Tính hình tròn với pi = 3.14
+        function tinhTron() {
+            var r = parseFloat(document.getElementById("bankinh").value);
+            if (isNaN(r)) {
+                alert("Vui lòng nhập bán kính");
+                return;
+            }
+            var cv = 2 * 3.14 * r;
+            var dt = 3.14 * r * r;
+            document.getElementById("resTron").innerHTML = "Chu vi: " + cv.toFixed(2) + " | Diện tích: " + dt.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h3>a. Hình chữ nhật</h3>
+    Dài: <input type="text" id="dai"> Rộng: <input type="text" id="rong">
+    <button onclick="tinhHCN()">Tính</button>
+    <p id="resHCN"></p>
+
+    <hr>
+
+    <h3>b. Hình tròn (π = 3.14)</h3>
+    Bán kính: <input type="text" id="bankinh">
+    <button onclick="tinhTron()">Tính</button>
+    <p id="resTron"></p>
+</body>
+</html>
